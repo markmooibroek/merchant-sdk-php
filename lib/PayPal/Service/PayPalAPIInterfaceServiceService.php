@@ -76,7 +76,7 @@ class PayPalAPIInterfaceServiceService extends PPBaseService {
     *
     */
 	public function __construct($config = null) {
-		parent::__construct(self::$SERVICE_NAME, 'SOAP', array(new PPMerchantServiceHandler()), $config);
+		parent::__construct(self::$SERVICE_NAME, 'SOAP', array(new \PayPal\Handler\PPMerchantServiceHandler(null, self::$SDK_NAME, self::$SDK_VERSION)), $config);
         //parent::$SDK_NAME    = self::$SDK_NAME ;
         //parent::$SDK_VERSION = self::$SDK_VERSION;
 	}
